@@ -1,0 +1,24 @@
+// ============ style global ============
+
+@import "./assets/style/reset";
+@import "./assets/style/variables";
+@import "./assets/style/extends";
+@import "./assets/style/animations";
+
+// ============ header ============
+
+@import "./components/Header/header";
+
+// ============ hero ============
+
+@import "./components/Hero/hero";
+
+// ============ main ============
+
+@import "./components/Main/main";
+@import "./components/Main/MainTitle/main-title";
+@import "./components/Main/MainBackers/main-backers";
+@import "./components/Main/MainAboutProject/styles/main-about-pojetct";
+@import "./components/Main/MainAboutProject/styles/main-about-project-modal";
+@import "./components/Main/MainAboutProject/styles/modal-checkout";
+@import "./components/Main/MainAboutProject/styles/modal-card-active";

@@ -1,0 +1,96 @@
+.modal-checkout {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+
+  .modal-checkout__container {
+    background-color: $White;
+    border-radius: 10px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 40px;
+    position: relative;
+    top: 30%;
+    width: 40%;
+
+    .modal-checkout__check {
+      img {
+        margin: 0 auto;
+        width: 100px;
+      }
+    }
+
+    .modal-checkout__description {
+      h1 {
+        font-size: 1.4rem;
+        margin: 40px 0 20px 0;
+      }
+      p {
+        color: $DarkGray;
+        line-height: 1.7;
+        margin-bottom: 20px;
+      }
+
+      button {
+        background-color: $ModerateCyan;
+        border-radius: 40px;
+
+        padding: 15px;
+        transition: 0.4s ease;
+        width: 120px;
+
+        a {
+          color: $White;
+          font-weight: 700;
+        }
+
+        &:hover {
+          background-color: $DarkCyan;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .modal-checkout__container {
+      padding: 30px 10px;
+      position: relative;
+      transform: none;
+      top: 145px;
+
+      .modal-checkout__check {
+        img {
+          margin: 0 auto 30px auto;
+          width: 75px;
+        }
+      }
+
+      .modal-checkout__description {
+        h1 {
+          font-size: 1.3rem;
+          margin-bottom: 30px;
+        }
+
+        p {
+          margin-bottom: 30px;
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 600px) and (max-width: 767px) {
+    .modal-checkout__container {
+      width: 70%;
+    }
+  }
+
+  @media screen and (max-width: 599px) {
+    .modal-checkout__container {
+      width: 90%;
+    }
+  }
+}

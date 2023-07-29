@@ -1,0 +1,88 @@
+.main-backers {
+  @extend %card-style;
+  margin-top: 25px;
+  padding: 50px 40px;
+
+  .main-backers__container {
+    display: flex;
+
+    .main-backers__item {
+      & + .main-backers__item {
+        border-left: 1px solid rgba(223, 220, 220, 0.9);
+        margin-left: 40px;
+        padding-left: 40px;
+
+        &:nth-child(2) {
+          padding-right: 40px;
+        }
+      }
+
+      h2 {
+        font-size: 2rem;
+      }
+
+      p {
+        color: $DarkGray;
+        margin-top: 15px;
+      }
+    }
+  }
+
+  .main-backers__bar {
+    background-color: rgba(223, 220, 220, 0.5);
+    border-radius: 10px;
+    color: transparent;
+    display: block;
+    margin-top: 30px;
+    width: 100%;
+
+    span {
+      background-color: $ModerateCyan;
+      border-radius: 10px;
+      display: block;
+      width: 80%;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    padding: 30px 20px;
+
+    .main-backers__container {
+      flex-direction: column;
+      text-align: center;
+
+      .main-backers__item {
+        & + .main-backers__item {
+          margin-top: 20px;
+          border-left: none;
+          margin-left: 0;
+          padding-left: 0;
+
+          &::before {
+            content: " ";
+            border-top: 1px solid rgba(223, 220, 220, 0.9);
+            display: block;
+            padding-top: 20px;
+            margin: 0 auto;
+            width: 100px;
+          }
+
+          &:nth-child(2) {
+            padding-right: 0;
+          }
+        }
+
+        h2 {
+          font-size: 2rem;
+        }
+
+        p {
+          margin: 15px 0 26px 0;
+        }
+      }
+    }
+
+    .main-backers__bar {
+    }
+  }
+}

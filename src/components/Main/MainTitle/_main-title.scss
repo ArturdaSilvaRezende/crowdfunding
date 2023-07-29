@@ -1,0 +1,113 @@
+.main-title {
+  @extend %card-style;
+  padding: 0 40px 40px 40px;
+
+  .main-title__images {
+    img {
+      margin: 0 auto;
+      position: relative;
+      top: -30px;
+      width: 60px;
+    }
+  }
+
+  .main-title__description {
+    text-align: center;
+
+    h1 {
+      font-size: 1.7rem;
+    }
+
+    p {
+      color: $DarkGray;
+      margin: 25px 0;
+    }
+  }
+
+  .main-title__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .btn__project {
+      background-color: $ModerateCyan;
+      color: $White;
+      border-radius: 40px;
+      font-weight: 700;
+      padding: 20px 10px;
+      transition: 0.4s ease;
+      width: 180px;
+
+      &:hover {
+        background-color: $DarkCyan;
+      }
+    }
+
+    .btn__bookmark {
+      display: flex;
+      align-items: center;
+
+      img {
+        margin-right: -20px;
+        z-index: 2;
+      }
+
+      span {
+        color: $ModerateCyan;
+        background-color: #f4f8f9;
+        border-radius: 0 30px 30px 0;
+        font-weight: 700;
+        padding: 20px 20px 20px 30px;
+        transition: 0.4s ease;
+
+        &::before {
+          content: "Bookmarked";
+          display: block;
+          width: 100px;
+        }
+
+        &:hover {
+          color: $DarkGray;
+
+          &::before {
+            content: " ";
+          }
+
+          &::after {
+            content: "Bookmark";
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    padding: 0 25px 35px 25px;
+
+    .main-title__description {
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      p {
+        font-size: 14px;
+        line-height: 1.7;
+      }
+    }
+
+    .main-title__buttons {
+      .btn__project {
+        width: 78%;
+      }
+      .btn__bookmark {
+        img {
+          margin-right: 0;
+          z-index: 1;
+        }
+        span {
+          display: none;
+        }
+      }
+    }
+  }
+}

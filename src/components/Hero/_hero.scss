@@ -1,0 +1,18 @@
+.hero {
+  position: relative;
+  z-index: -1;
+
+  .hero__mobile {
+    display: none;
+  }
+
+  @media screen and (max-width: 767px) {
+    .hero__mobile {
+      display: block;
+    }
+
+    .hero__desktop {
+      display: none;
+    }
+  }
+}
